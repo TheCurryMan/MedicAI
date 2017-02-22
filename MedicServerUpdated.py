@@ -17,10 +17,10 @@ callers = {
 def hello_monkey():
     """Respond and greet the caller by name."""
     body = request.values.get('Body', None)
-    media = request.values.get('MediaUrl0', None)
+    img_url = request.values.get('MediaUrl0', None)
     from_number = request.values.get('From', None)
     if from_number in callers:
-        message = callers[from_number] + ", thanks for the message! " + body + " " + media
+        message = callers[from_number] + ", thanks for the message! " + body + " " + img_url
 
     else:
         message = "Monkey, thanks for the message!"
