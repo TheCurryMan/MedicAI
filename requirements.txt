@@ -1,3 +1,4 @@
 wheel==0.24.0
 Flask>=0.8
 twilio>=3.3.6
+gunicorn=19.6.0

@@ -1,1 +1,1 @@
-web: python MedicServerUpdated.py
+web: gunicorn medicserverupdated.wsgi --log-file -
