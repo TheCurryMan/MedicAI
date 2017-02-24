@@ -1,7 +1,3 @@
-from nltk.corpus import twitter_samples
-from nltk.corpus import stopwords
-from nltk.tag import pos_tag_sents
-from nltk.stem import *
 from stemming.porter2 import stem
 import re
 
@@ -14,7 +10,9 @@ def getDiseaseFromSymptom(message):
     lower_case = letters_only.lower()
     words = lower_case.split()
 
-    words = [w for w in words if not w in stopwords.words("english")]
+    stopwords = [' i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves', 'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself', 'it', 'its', 'itself', 'they', 'them', 'their', 'theirs', 'themselves', 'what', 'which', 'who', 'whom', 'this', 'that', 'these', 'those', 'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'having', 'do', 'does', 'did', 'doing', 'a', 'an', 'the', 'and', 'but', 'if', 'or', 'because', 'as', 'until', 'while', 'of', 'at', 'by', 'for', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'in', 'out', 'on', 'off', 'over', 'under', 'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how', 'all', 'any', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such', 'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very', 's', 't', 'can', 'will', 'just', 'don', 'should', 'now', 'd', 'll', 'm', 'o', 're', 've', 'y', 'ain', 'aren', 'couldn', 'didn', 'doesn', 'hadn', 'hasn', 'haven', 'isn', 'ma', 'mightn', 'mustn', 'needn', 'shan', 'shouldn', 'wasn', 'weren', 'won', 'wouldn', '']
+
+    words = [w for w in words if not w in stopwords]
 
     stemmed_words = [stem(word) for word in words]
 
@@ -24,7 +22,7 @@ def getDiseaseFromSymptom(message):
 
     no_duplicate_stemmed_symptoms = ['neck','dot','spot','sore', 'throat', 'hyperventil', 'code', 'help', 'edema', 'scratch', 'move', 'amusia', 'fecal', 'urinari', 'diarrhea', 'sleep', 'miscarriag', 'discharg', 'sleepi', 'convuls', 'onset', 'dyspnea', 'tire', 'gastrointestin', 'show', 'chorea', 'rash', 'sensat', 'vaginismus', 'hyperthermia', 'labour', 'black', 'under', 'stranguri', 'persecut', 'bradykinesia', 'dysphagia', 'ejacul', 'shoot', 'apnea', 'around', 'tinnitus', 'mydriasi', 'hiss', 'stop', 'dermatom', 'hypoventil', 'prosopagnosia', 'odynophagia', 'mania', 'vomit', 'walk', 'dyspepsia', 'bruis', 'loss', 'hematuria', 'like', 'rectal', 'edit', 'tachypnea', 'syncop', 'integumentari', 'list', 'cataplexi', 'malodor', 'pregnanc', 'lose', 'miosi', 'tic', 'alexia', 'side', 'vision', 'hallucin', 'vagin', 'flatul', 'anomia', 'weight', 'hemiballismus', 'back', 'infertil', 'sign', 'dysuria', 'see', 'paralysi', 'cachexia', 'ballismus', 'pass', 'proper', 'sciatica', 'arm', 'agoraphobia', 'depress', 'vertigo', 'paresthesia', 'constip', 'obstetr', 'stool', 'intercours', 'icd', 'earli', 'blur', 'claustrophobia', 'condit', 'gynaecolog', 'overdos', 'arrhythmia', 'sweati', 'ocular', 'acalculia', 'leg', 'late', 'asthenia', 'weak', 'akinesia', 'abras', 'tremor', 'impot', 'cough', 'bleed', 'anorexia', 'dysarthria', 'akathisia', 'abdomin', 'nausea', 'ach', 'paranoia', 'drug', 'malais', 'dri', 'thing', 'frequenc', 'sweat', 'confus', 'action', 'swallow', 'loud', 'blind', 'dalrympl', 'acrophobia', 'harm', 'hypothermia', 'claudic', 'feel', 'tweak', 'pulmonari', 'cramp', 'one', 'chronic', 'phobia', 'fatigu', 'urolog', 'ataxia', 'ring', 'urticaria', 'speak', 'urin', 'avail', 'use', 'earach', 'doubl', 'sputum', 'suicid', 'euphoria', 'breath', 'shiver', 'electr', 'nauseat', 'lacer', 'tachycardia', 'hemoptysi', 'headach', 'head', 'alopecia', 'bowel', 'muscl', 'deliber', 'fugax', 'sx', 'hear', 'gain', 'rememb', 'palpit', 'ear', 'spin', 'symptom', 'chill', 'sound', 'room', 'anosognosia', 'bloat', 'bradypnea', 'flu', 'proctalgia', 'anxieti', 'haematemesi', 'jaundic', 'neurolog', 'anasarca', 'hirsut', 'psycholog', 'retent', 'exophthalmo', 'retrograd', 'hematochezia', 'dizzi', 'cardiovascular', 'pelvic', 'general', 'dysgraphia', 'incomplet', 'anhedonia', 'amaurosi', 'thirsti', 'somnol', 'pyrosi', 'apraxia', 'pleurit', 'self', 'medic', 'deform', 'nystagmus', 'write', 'chest', 'preced', 'sick', 'belch', 'polyuria', 'appetit', 'lhermitt', 'smell', 'tingl', 'product', 'fever', 'pain', 'itch', 'normal', 'insomnia', 'swell', 'steatorrhea', 'wateri', 'dysdiadochokinesia', 'mouth', 'blood', 'numb', 'toothach', 'blister', 'expand', 'incontin', 'short', 'light', 'pyrexia', 'arachnophobia', 'bloodi', 'homicid', 'epistaxi', 'abnorm', 'dystonia', 'melena', 'bradycardia', 'tast', 'ideat', 'agnosia']
 
-    disease_symptoms = {"Chicken Pox":[('blister', 1), ('scab',1), ('ulcer',1), ('dot', 3), ('spot', 3), ('fatigu', 1), ('fever',1), ('appetit',1), ('headach',1), ('itch',1), ('swell',1)], "Goitre": [('lump', 3), ('swell', 1), ('coughing',1), ('breath',1), ('throat', 3)]}
+    disease_symptoms = {"Chicken Pox":[('blister', 1), ('scab',1), ('ulcer',1), ('dot', 3), ('spot', 3), ('fatigu', 1), ('fever',1), ('appetit',1), ('headach',1), ('itch',1), ('swell',1)], "Goitre": [('lump', 3), ('swell', 1), ('coughing',1), ('breath',1), ('throat', 3), ('neck', 3)]}
 
     actual_symptoms = set(stemmed_words).intersection(no_duplicate_stemmed_symptoms)
 
@@ -47,3 +45,4 @@ def getDiseaseFromSymptom(message):
             maxNum = len(list_of_symptoms)
 
     return final_disease
+
