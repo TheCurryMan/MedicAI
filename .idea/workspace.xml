@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be363f1f-64a4-40d8-a8cb-dc81ed33384f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nltk.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/danish" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/dutch" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/english" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/finnish" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/french" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/german" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/hungarian" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/italian" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/kazakh" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/norwegian" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/portuguese" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/russian" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/spanish" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/swedish" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stopwords/turkish" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MedicServerUpdated.py" afterPath="$PROJECT_DIR$/MedicServerUpdated.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nlp.py" afterPath="$PROJECT_DIR$/nlp.py" />
     </list>
     <ignored path="MedicServerUpdated.iws" />
@@ -46,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MedicServerUpdated.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MedicServerUpdated.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.72621036">
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -58,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nlp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nlp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29195803">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+            <state vertical-scroll-proportion="-16.74074">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -117,10 +100,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/MedicServerUpdated.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/nlp.py" />
         <option value="$PROJECT_DIR$/nltk.txt" />
+        <option value="$PROJECT_DIR$/nlp.py" />
+        <option value="$PROJECT_DIR$/MedicServerUpdated.py" />
       </list>
     </option>
   </component>
@@ -456,7 +439,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3684771" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32800853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30457935" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -538,16 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nltk.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -558,10 +531,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nlp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29195803">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        <state vertical-scroll-proportion="-16.74074">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72621036">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

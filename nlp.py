@@ -38,7 +38,7 @@ def getDiseaseFromSymptom(message):
             vals.append(i[1])
         list_of_symptoms = list(set(real_symptoms).intersection(actual_symptoms))
         value = sum([vals[real_symptoms.index(w)] for w in list_of_symptoms])
-        if maxNum > value:
+        if maxNum >= value:
             pass
         else:
             final_disease = disease
