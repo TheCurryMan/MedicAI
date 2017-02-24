@@ -1,6 +1,7 @@
 from flask import Flask, request
 import twilio.twiml
 from twilio.rest import TwilioRestClient
+from nlp import getDiseaseFromSymptom
 
 app = Flask(__name__)
 # Try adding your own number to this list!
@@ -20,10 +21,10 @@ def hello_monkey():
     img_url = request.values.get('MediaUrl0', None)
     from_number = request.values.get('From', None)
     if from_number in callers:
-        message = callers[from_number] + ", thanks for the message! " + body + " " + img_url
+        message = "Your disease is " + getDiseaseFromSymptom(body)
 
     else:
-        message = "Monkey, thanks for the message!"
+        message = "Your disease is " + getDiseaseFromSymptom(body)
 
     resp = twilio.twiml.Response()
     resp.message(message)
