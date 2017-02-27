@@ -27,6 +27,8 @@ def getDiseaseFromSymptom(message):
 
     actual_symptoms = set(stemmed_words).intersection(no_duplicate_stemmed_symptoms)
 
+    id_symptoms = {133: 'Night cough', 136: 'Neck pain', 9: 'Headache', 10: 'Abdominal pain', 139: 'Cold sweats', 12: 'Pain in the limbs', 13: 'Sore throat', 14: 'Runny nose', 15: 'Cough', 16: 'Tiredness', 273: 'Dry eyes', 149: 'Hot flushes', 23: 'Weight gain', 153: 'Fast, deepened breathing', 28: 'Stuffy nose', 29: 'Shortness of breath', 30: 'Wheezing', 287: 'Eye pain', 33: 'Eye redness', 35: 'Lip swelling', 37: 'Palpitations', 140: 'Paralysis', 40: 'Increased thirst', 169: 'Swollen glands on the neck', 170: 'Cheek swelling', 44: 'Nausea', 45: 'Heartburn', 46: 'Burning in the throat', 175: 'Chills', 179: 'Stomach burning', 52: 'Sleeplessness', 181: 'Vomiting blood', 54: 'Reduced appetite', 56: 'weakness', 57: 'Going black before the eyes', 31: 'Chest tightness', 138: 'Sweating', 64: 'Sputum', 11: 'Fever', 73: 'Itching eyes', 75: 'Burning eyes', 76: 'Feeling of foreign body in the eye', 207: 'Dizziness', 211: 'Tears', 203: 'Pain on swallowing', 87: 'Earache', 92: 'Early satiety', 95: 'Sneezing', 96: 'Itching in the nose', 144: 'Unconsciousness, short', 101: 'Vomiting', 17: 'Chest pain', 104: 'Back pain', 235: 'Memory gap', 238: 'Anxiety', 112: 'Menstruation disorder', 114: 'Nervousness', 115: 'Tremor at rest', 244: 'Drooping eyelid', 248: 'Swollen glands in the armpits', 122: 'Hiccups', 123: 'Missed period', 124: 'Skin rash'}
+
     symptoms_having_ids = ['dizzi', 'weight', 'tired', 'feel', 'heartburn', 'back', 'menstruat', 'paralysi', 'skin', 'go', 'stomach', 'cold', 'miss', 'sleepless', 'eye', 'droop', 'earach', 'memori', 'nervous', 'hot', 'chest', 'lip', 'nausea', 'earli', 'headach', 'fever', 'pain', 'reduc', 'itch', 'swollen', 'burn', 'weak', 'stuffi', 'sneez', 'sore', 'hiccup', 'vomit', 'wheez', 'fast,', 'increas', 'tremor', 'cough', 'runni', 'chill', 'palpit', 'short', 'neck', 'sputum', 'tear', 'abdomin', 'cheek', 'dri', 'anxieti', 'sweat', 'night', 'unconsciousness,']
 
     symptom_to_id = {'dizzi': 207, 'weight': 23, 'tired': 16, 'feel': 76, 'heartburn': 45, 'back': 104, 'menstruat': 112, 'paralysi': 140, 'skin': 124, 'go': 57, 'stomach': 179, 'cold': 139, 'miss': 123, 'sleepless': 52, 'eye': 33, 'droop': 244, 'earach': 87, 'memori': 235, 'nervous': 114, 'hot': 149, 'chest': 31, 'lip': 35, 'nausea': 44, 'earli': 92, 'headach': 9, 'fever': 11, 'pain': 203, 'reduc': 54, 'itch': 96, 'swollen': 169, 'burn': 46, 'weak': 56, 'stuffi': 28, 'sneez': 95, 'sore': 13, 'hiccup': 122, 'vomit': 181, 'wheez': 30, 'fast,': 153, 'increas': 40, 'tremor': 115, 'cough': 15, 'runni': 14, 'chill': 175, 'palpit': 37, 'short': 29, 'neck': 136, 'sputum': 64, 'tear': 211, 'abdomin': 10, 'cheek': 170, 'dri': 273, 'anxieti': 238, 'sweat': 138, 'night': 133, 'unconsciousness,': 144}
@@ -36,10 +38,10 @@ def getDiseaseFromSymptom(message):
 
     #Trying with the API
 
-    the_real_symptoms_with_ids = symptoms_having_ids.intersection(stemmed_words)
+    the_real_symptoms_with_ids = list(set(symptoms_having_ids).intersection(stemmed_words))
     ids = []
     for i in the_real_symptoms_with_ids:
-        ids.append(symptom_to_id[i])
+        ids.append(str(symptom_to_id[i]))
     return getPotentialDiseasesFromIds(ids)
 
 """
