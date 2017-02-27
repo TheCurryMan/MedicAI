@@ -30,4 +30,4 @@ place = self.request.get("place")
                     beds = int(item.value)
                     alldata.append({hospName:beds})
 
-        self.response.write(json.dumps({place:alldata}))
+

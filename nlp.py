@@ -4,7 +4,6 @@ from stemming.porter2 import stem
 import re
 
 def getDiseaseFromSymptom(message):
-
     user_input = message
 
     letters_only = re.sub("[^a-zA-Z]", " ", user_input)
