@@ -65,12 +65,9 @@ def getPotentialDiseasesFromIds(ids):
             break
         finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName']) + "\n"
         finalData += "Likelihood: " + str(round(int(respjson[i]['Issue']['Accuracy']), 3)) + "%\n"
-        print(respjson)
         with open('details.json') as data_file:
             data = json.load(data_file)
             finalData += data[str(respjson[i]["Issue"]["ID"])]["TreatmentDescription"] + "\n"
         counter += 1
 
     return finalData
-
-print(getPotentialDiseasesFromIds(["13", "9"]))
