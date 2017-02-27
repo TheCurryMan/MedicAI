@@ -57,6 +57,6 @@ def getPotentialDiseasesFromIds(ids):
     respjson = json.loads(data.decode("utf-8"))
     finalData = ""
     for i in range(0, len(respjson)):
-        finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName'])
+        finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName']) + "\n"
         finalData += "Likelihood: " + str(round(int(respjson[i]['Issue']['Accuracy']), 3)) + "%\n"
     return finalData

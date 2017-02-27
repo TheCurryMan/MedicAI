@@ -20,7 +20,7 @@ def hello_monkey():
     if finalDisease == "":
         message = "We were unable to find a disease with those conditions. Try being more specific or upload a picture!"
     else:
-        message = "Your disease is " + finalDisease
+        message = finalDisease
 
     resp = twilio.twiml.Response()
     resp.message(message)
