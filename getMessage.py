@@ -81,5 +81,5 @@ def getMessage(from_number, body, img_url):
 
     #Save the new data back to firebase
     result = fb.put('', '/Users', data)
-
+    message = google(message, language_data[data[from_number]["language"]])
     return message
