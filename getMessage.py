@@ -36,6 +36,11 @@ def getMessage(from_number, body, img_url):
 
         if body.split(" ")[0].lower() == "language":
             data[from_number]["language"] = language_data[body.split(" ")[2].lower()]
+            print(data[from_number]["language"])
+            message = "Changed your language to " + body.split(" ")[2].lower() + "."
+            result = fb.put('', '/Users', data)
+            message = bing(message, dst=data[from_number]["language"])
+            return message
 
         # Takes data as location, goes to age
         if data[from_number]["current"] == "location":
@@ -84,4 +89,4 @@ def getMessage(from_number, body, img_url):
     message = bing(message, dst=language_data[data[from_number]["language"]])
     return message
 
-getMessage("+14252298079", "Help i have a sore throat, and my feet are numb", "")
+print(getMessage("+14252298079", "language - english", ""))
