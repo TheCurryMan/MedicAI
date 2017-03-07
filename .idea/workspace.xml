@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be363f1f-64a4-40d8-a8cb-dc81ed33384f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nlp.py" afterPath="$PROJECT_DIR$/nlp.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/getMessage.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MedicServerUpdated.py" afterPath="$PROJECT_DIR$/MedicServerUpdated.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userData.json" afterPath="$PROJECT_DIR$/userData.json" />
     </list>
     <ignored path="MedicServerUpdated.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,36 +20,15 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/MedicServerUpdated$getDescriptions.coverage" NAME="getDescriptions Coverage Results" MODIFIED="1488161890037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MedicServerUpdated$getMessage.coverage" NAME="getMessage Coverage Results" MODIFIED="1488865240889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MedicServerUpdated$nlp.coverage" NAME="nlp Coverage Results" MODIFIED="1488863500132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MedicServerUpdated$testingCode.coverage" NAME="testingCode Coverage Results" MODIFIED="1488860445357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MedicServerUpdated$getSymptomsAndIds.coverage" NAME="getSymptomsAndIds Coverage Results" MODIFIED="1488168286408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/MedicServerUpdated$MedicServerUpdated.coverage" NAME="MedicServerUpdated Coverage Results" MODIFIED="1487723647831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/MedicServerUpdated$MedicServerUpdated.coverage" NAME="MedicServerUpdated Coverage Results" MODIFIED="1488864632119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/MedicServerUpdated$DiseaseFinder.coverage" NAME="DiseaseFinder Coverage Results" MODIFIED="1488224849057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="MedicServerUpdated.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.30511183">
-                    <caret line="51" column="54" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="54" />
-                    <folding>
-                      <element signature="e#0#32#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -54,11 +36,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="nlp.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MedicServerUpdated.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getMessage.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/getMessage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5273632">
+              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nlp.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nlp.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8507463">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -90,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/userData.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+              <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -138,18 +144,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getDescriptions.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getDescriptions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -179,9 +173,10 @@
         <option value="$PROJECT_DIR$/userData.txt" />
         <option value="$PROJECT_DIR$/testingCode.py" />
         <option value="$PROJECT_DIR$/userData.json" />
-        <option value="$PROJECT_DIR$/MedicServerUpdated.py" />
         <option value="$PROJECT_DIR$/DiseaseFinder.py" />
         <option value="$PROJECT_DIR$/nlp.py" />
+        <option value="$PROJECT_DIR$/MedicServerUpdated.py" />
+        <option value="$PROJECT_DIR$/getMessage.py" />
       </list>
     </option>
   </component>
@@ -264,7 +259,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.nlp">
+  <component name="RunManager" selected="Python.getMessage">
     <configuration default="false" name="nlp" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -301,24 +296,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="getDescriptions" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="MedicServerUpdated" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/getDescriptions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="getSymptomsAndIds" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -351,6 +328,24 @@
       <module name="MedicServerUpdated" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testingCode.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="getMessage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="MedicServerUpdated" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/getMessage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -570,17 +565,17 @@
       <item index="0" class="java.lang.String" itemvalue="Python.MedicServerUpdated" />
       <item index="1" class="java.lang.String" itemvalue="Python.nlp" />
       <item index="2" class="java.lang.String" itemvalue="Python.DiseaseFinder" />
-      <item index="3" class="java.lang.String" itemvalue="Python.getDescriptions" />
-      <item index="4" class="java.lang.String" itemvalue="Python.getSymptomsAndIds" />
-      <item index="5" class="java.lang.String" itemvalue="Python.testingCode" />
+      <item index="3" class="java.lang.String" itemvalue="Python.getSymptomsAndIds" />
+      <item index="4" class="java.lang.String" itemvalue="Python.testingCode" />
+      <item index="5" class="java.lang.String" itemvalue="Python.getMessage" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.nlp" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testingCode" />
-        <item index="2" class="java.lang.String" itemvalue="Python.DiseaseFinder" />
-        <item index="3" class="java.lang.String" itemvalue="Python.getSymptomsAndIds" />
-        <item index="4" class="java.lang.String" itemvalue="Python.getDescriptions" />
+        <item index="0" class="java.lang.String" itemvalue="Python.getMessage" />
+        <item index="1" class="java.lang.String" itemvalue="Python.nlp" />
+        <item index="2" class="java.lang.String" itemvalue="Python.testingCode" />
+        <item index="3" class="java.lang.String" itemvalue="Python.DiseaseFinder" />
+        <item index="4" class="java.lang.String" itemvalue="Python.getSymptomsAndIds" />
       </list>
     </recent_temporary>
   </component>
@@ -996,11 +991,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/locationBasedAnalysis.py">
+    <entry file="file://$PROJECT_DIR$/getDescriptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-          <folding />
+          <caret line="12" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,20 +1009,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getDescriptions.py">
+    <entry file="file://$PROJECT_DIR$/nearestDoctor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userData.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="2" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1034,24 +1021,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30511183">
-          <caret line="51" column="54" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nearestDoctor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1074,12 +1043,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/userData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="55" selection-start-line="0" selection-start-column="55" selection-end-line="0" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nlp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8507463">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locationBasedAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getMessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5273632">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
