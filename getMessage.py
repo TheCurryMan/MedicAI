@@ -10,6 +10,7 @@ Either gets data from user, returns symptom analysis, or restarts the user
 
 
 def getMessage(from_number, body, img_url):
+
     language_data = {'portuguese': 'pt', 'irish': 'ga', 'chinese': 'zh-TW', 'danish': 'da', 'czech': 'cs',
                      'japanese': 'ja', 'spanish': 'es', 'urdu': 'ur', 'polish': 'pl', 'arabic': 'ar', 'swahili': 'sw',
                      'vietnamese': 'vi', 'german': 'de', 'hindi': 'hi', 'dutch': 'nl', 'korean': 'ko', 'swedish': 'sv',
@@ -80,6 +81,6 @@ def getMessage(from_number, body, img_url):
 
     # Save the new data back to firebase
     result = fb.put('', '/Users', data)
-    if message != "":
-        message = google(message, language_data[data[from_number]["language"]])
+    message = google(message, language_data[data[from_number]["language"]])
     return message
+
