@@ -2,6 +2,7 @@ from flask import Flask, request
 import twilio.twiml
 from twilio.rest import TwilioRestClient
 from nlp import getDiseaseFromSymptom
+import json
 
 app = Flask(__name__)
 # Try adding your own number to this list!
@@ -15,6 +16,48 @@ def hello_monkey():
     body = request.values.get('Body', None)
     img_url = request.values.get('MediaUrl0', None)
     from_number = request.values.get('From', None)
+
+    data = {}
+
+    with open('userData.json') as jsonFile:
+        data = json.load(jsonFile)
+
+
+
+    message = ""
+    if from_number in data:
+        if data[from_number]["current"] == "location":
+            data[from_number]["current"] == "age"
+            data[from_number]["location"] = body
+            message = "The next thing we need to know is how old you are. Please enter your age."
+
+        elif data[from_number]["current"] == "age":
+            try:
+                val = int(body)
+                data[from_number]["age"] = body
+                data[from_number]["current"] == "gender"
+                message = "We need one last thing. Please enter your gender (M/F)."
+            except:
+                message = "Please enter an actual number. (Ex: 12, 73)"
+
+        if data[from_number]["current"] == "gender":
+            if body == "M" or "F" or "m" or "f":
+
+            data[from_number]["current"] == "age"
+            data[from_number]["location"] = body
+            message = "The next thing we need to know is how old you are. Please enter your age."
+
+
+    else:
+        data[from_number] = {"current": "location"}
+        json.dumps(info, 'userData.json')
+        message = "Hi there! Welcome to MedicAI. Before we can help you out, we're going to need a couple of things to achieve better results. Please enter your address."
+
+
+    resp = twilio.twiml.Response()
+    resp.message(message)
+    return str(resp)
+
     finalDisease = getDiseaseFromSymptom(body)
 
     if finalDisease == "":
