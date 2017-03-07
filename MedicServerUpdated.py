@@ -33,7 +33,7 @@ def hello_monkey():
             try:
                 val = int(body)
                 data[from_number]["age"] = body
-                data[from_number]["current"] == "gender"
+                data[from_number]["current"] = "gender"
                 message = "We need one last thing. Please enter your gender (M/F)."
             except:
                 message = "Please enter an actual number. (Ex: 12, 73)"
@@ -41,10 +41,10 @@ def hello_monkey():
         elif data[from_number]["current"] == "gender":
             message = "Thanks for registering on MedicAI! How can we help you today?"
             if body == "M" or "m":
-                data[from_number]["current"] == "completed"
+                data[from_number]["current"] = "completed"
                 data[from_number]["location"] = "male"
             elif body == "F" or "f":
-                data[from_number]["current"] == "completed"
+                data[from_number]["current"] = "completed"
                 data[from_number]["location"] = "female"
             else:
                 message = "Please enter your gender as M (male) or F (female)"
