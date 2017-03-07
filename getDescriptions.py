@@ -1,6 +1,11 @@
 import urllib2
 import json
 
+"""
+Python script to get all the descriptions of each disease, based on the id of each disease.
+Crawls the HealthService API we're currently using, stores it in local json file
+"""
+
 nums = [131, 324, 109, 166, 51, 79, 357, 50, 489, 347, 167, 446, 18, 376, 68, 67, 103, 19, 510, 476, 488, 151, 497, 59]
 
 finalData = ""

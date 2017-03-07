@@ -2,6 +2,11 @@ import urllib2
 import json
 from firebase import firebase
 
+"""
+Calls HealthService API to find the disease analysis based on symptom ids passed in
+Also gets the mapped disease description from the API data
+"""
+
 class UrlBuilder:
     def __init__(self, base):
         if base[-1] != '?':
@@ -34,13 +39,16 @@ class UrlBuilder:
 def getPotentialDiseasesFromIds(ids, number):
     print(ids)
 
+    #Initialize firebase and get User data
     fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
     data = fb.get("/Users", None)
+
+    #Set up URL for API calling
     URL = "https://sandbox-healthservice.priaid.ch/diagnosis?"
     gender = data[number]["gender"]
     year_of_birth = str(2017 - int(data[number]["age"]))
     # Need to generate new token every 24 hours. Gonna be a pain.
-    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6Im5pa2hpbC5hamphcmFwdUBnbWFpbC5jb20iLCJyb2xlIjoiVXNlciIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL3NpZCI6IjEwMTMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ZlcnNpb24iOiIyMDAiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL2xpbWl0IjoiOTk5OTk5OTk5IiwiaHR0cDovL2V4YW1wbGUub3JnL2NsYWltcy9tZW1iZXJzaGlwIjoiUHJlbWl1bSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGFuZ3VhZ2UiOiJlbi1nYiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvZXhwaXJhdGlvbiI6IjIwOTktMTItMzEiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXBzdGFydCI6IjIwMTctMDEtMDEiLCJpc3MiOiJodHRwczovL3NhbmRib3gtYXV0aHNlcnZpY2UucHJpYWlkLmNoIiwiYXVkIjoiaHR0cHM6Ly9oZWFsdGhzZXJ2aWNlLnByaWFpZC5jaCIsImV4cCI6MTQ4ODg3OTI2MiwibmJmIjoxNDg4ODcyMDYyfQ.VmyApVtKPnKZM-KUP850rD2nz1nbKn8qkBg0qvG5XGA"
+    token = data["token"]
     language = "en-gb"
     symptoms = ids
 
@@ -51,19 +59,16 @@ def getPotentialDiseasesFromIds(ids, number):
     base.addParam("token", token)
     base.addParam("language", language)
 
-    #print("Gender: " + gender.title())
-    #print("Age: " + str(2016 - int(year_of_birth)))
-    #print("Symptom ID(s): " + str(",".join(symptoms)))
-    print(base.getURL())
-
-
+    #Get data from URL
     req = urllib2.Request(base.getURL())
     data = urllib2.urlopen(req).read()
     respjson = json.loads(data.decode("utf-8"))
-    print(respjson)
+
     finalData = ""
     counter = 0
 
+
+    #Parse through JSON and get Disease Data + Description
     for i in range(0, len(respjson)):
         if counter == 2:
             break

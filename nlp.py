@@ -4,13 +4,20 @@ from stemming.porter2 import stem
 from DiseaseFinder import getPotentialDiseasesFromIds
 import re
 
+"""
+Performs NLP on the body receieved to figure out the key symptoms in the user message
+Lemmitization + Tokenization + Stemming -> Intersect data and map symptoms to ids
+
+"""
 
 def getDiseaseFromSymptom(message, number):
+
     user_input = message
 
     letters_only = re.sub("[^a-zA-Z]", " ", user_input)
 
     lower_case = letters_only.lower()
+
     words = lower_case.split()
 
     words = [w for w in words if not w in stopwords.words("english")]
