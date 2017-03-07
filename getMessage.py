@@ -2,21 +2,22 @@ import json
 from nlp import getDiseaseFromSymptom
 from firebase import firebase
 from translation import google
-import languageData
-
 """
 Overall message function that decides what to return back to the user
 Either gets data from user, returns symptom analysis, or restarts the user
 """
 
+
 def getMessage(from_number, body, img_url):
-
-    language_data = {'Swahili': 'sw', 'Swedish': 'sv', 'Lithuanian': 'lt', 'Turkish': 'tr', 'Hindi': 'hi', 'Dutch': 'nl', 'Korean': 'ko',
- 'Danish': 'da', 'Bulgarian': 'bg', 'Latin': 'la', 'Finnish': 'fi', 'Ukrainian': 'uk', 'Vietnamese': 'vi',
- 'French': 'fr', 'Russian': 'ru', 'Thai': 'th', 'Filipino': 'tl', 'Greek': 'el', 'Latvian': 'lv', 'English': 'en',
- 'Italian': 'it', 'Portuguese': 'pt', 'Irish': 'ga', 'Chinese': 'zh-TW', 'Czech': 'cs', 'Japanese': 'ja',
- 'German': 'de', 'Spanish': 'es', 'Urdu': 'ur', 'Polish': 'pl', 'Arabic': 'ar'}
-
+    language_data = {'Swahili': 'sw', 'Swedish': 'sv', 'Lithuanian': 'lt', 'Turkish': 'tr', 'Hindi': 'hi',
+                     'Dutch': 'nl', 'Korean': 'ko',
+                     'Danish': 'da', 'Bulgarian': 'bg', 'Latin': 'la', 'Finnish': 'fi', 'Ukrainian': 'uk',
+                     'Vietnamese': 'vi',
+                     'French': 'fr', 'Russian': 'ru', 'Thai': 'th', 'Filipino': 'tl', 'Greek': 'el', 'Latvian': 'lv',
+                     'English': 'en',
+                     'Italian': 'it', 'Portuguese': 'pt', 'Irish': 'ga', 'Chinese': 'zh-TW', 'Czech': 'cs',
+                     'Japanese': 'ja',
+                     'German': 'de', 'Spanish': 'es', 'Urdu': 'ur', 'Polish': 'pl', 'Arabic': 'ar'}
 
     # Initialize Firebase Application and get user data
     fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
@@ -24,10 +25,10 @@ def getMessage(from_number, body, img_url):
 
     message = ""
 
-    #Check to see if the user has used our app before
+    # Check to see if the user has used our app before
     if from_number in data:
 
-        #Resets User Data
+        # Resets User Data
         if body == "R":
             data[from_number]["current"] = "location"
             result = fb.put('', '/Users', data)
@@ -37,13 +38,13 @@ def getMessage(from_number, body, img_url):
         if body.split(" ")[0].lower() == "language":
             data[from_number]["language"] = language_data[body.split(" ")[2].lower()]
 
-        #Takes data as location, goes to age
+        # Takes data as location, goes to age
         if data[from_number]["current"] == "location":
             data[from_number]["current"] = "age"
             data[from_number]["location"] = body
             message = "The next thing we need to know is how old you are. Please enter your age."
 
-        #Takes data as age, goes to gender
+        # Takes data as age, goes to gender
         elif data[from_number]["current"] == "age":
             try:
                 val = int(body)
@@ -53,7 +54,7 @@ def getMessage(from_number, body, img_url):
             except:
                 message = "Please enter an actual number. (Ex: 12, 73)"
 
-        #Takes data as gender, now user can use application
+        # Takes data as gender, now user can use application
         elif data[from_number]["current"] == "gender":
             message = "Thanks for registering on MedicAI! How can we help you today?"
             if body == "M" or "m":
@@ -65,7 +66,7 @@ def getMessage(from_number, body, img_url):
             else:
                 message = "Please enter your gender as M (male) or F (female)"
 
-        #Start getting symptom analysis from text
+        # Start getting symptom analysis from text
         else:
             finalDisease = getDiseaseFromSymptom(body, from_number)
 
@@ -74,12 +75,12 @@ def getMessage(from_number, body, img_url):
             else:
                 message = finalDisease
 
-    #If the user has never used our app, then we walk him through our intialization process
+    # If the user has never used our app, then we walk him through our intialization process
     else:
-        data[from_number] = {"current": "location", "language":"english"}
+        data[from_number] = {"current": "location", "language": "english"}
         message = "Hi there! Welcome to MedicAI. Before we can help you out, we're going to need a couple of things to achieve better results. Please enter your address."
 
-    #Save the new data back to firebase
+    # Save the new data back to firebase
     result = fb.put('', '/Users', data)
     message = google(message, language_data[data[from_number]["language"]])
     return message
