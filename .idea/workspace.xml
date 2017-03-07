@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be363f1f-64a4-40d8-a8cb-dc81ed33384f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/nearestDoctor.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/userData.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/languageData.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DiseaseFinder.py" afterPath="$PROJECT_DIR$/DiseaseFinder.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MedicServerUpdated.py" afterPath="$PROJECT_DIR$/MedicServerUpdated.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getDescriptions.py" afterPath="$PROJECT_DIR$/getDescriptions.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getMessage.py" afterPath="$PROJECT_DIR$/getMessage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python3.5/site-packages/werkzeug/debug/shared/debugger.js" afterPath="$PROJECT_DIR$/lib/python3.5/site-packages/werkzeug/debug/shared/debugger.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/locationBasedAnalysis.py" afterPath="$PROJECT_DIR$/locationBasedAnalysis.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nlp.py" afterPath="$PROJECT_DIR$/nlp.py" />
     </list>
     <ignored path="MedicServerUpdated.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getMessage.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getMessage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getMessage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="22.222221">
-              <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+            <state vertical-scroll-proportion="0.07092199">
+              <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -74,6 +67,16 @@
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="languageData.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/languageData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,10 +123,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiseaseFinder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DiseaseFinder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DiseaseFinder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35866985">
+            <state vertical-scroll-proportion="0.0">
               <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -161,10 +164,11 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/locationBasedAnalysis.py" />
         <option value="$PROJECT_DIR$/getDescriptions.py" />
-        <option value="$PROJECT_DIR$/getMessage.py" />
         <option value="$PROJECT_DIR$/MedicServerUpdated.py" />
         <option value="$PROJECT_DIR$/nlp.py" />
         <option value="$PROJECT_DIR$/DiseaseFinder.py" />
+        <option value="$PROJECT_DIR$/languageData.py" />
+        <option value="$PROJECT_DIR$/getMessage.py" />
       </list>
     </option>
   </component>
@@ -174,8 +178,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="23" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1417" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -579,18 +584,27 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="23" y="23" width="1417" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27038628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41379312" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36791444" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36688742" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40529802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40529802" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3035144" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -964,6 +978,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/symptoms.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DiseaseFinder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MedicServerUpdated.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -974,23 +1006,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getMessage.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="22.222221">
-          <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nlp.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,14 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="289" column="0" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1020,20 +1032,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/symptoms.json">
+    <entry file="file://$PROJECT_DIR$/nlp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state vertical-scroll-proportion="-3.3333333">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languageData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DiseaseFinder.py">
+    <entry file="file://$PROJECT_DIR$/getMessage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35866985">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.07092199">
+          <caret line="37" column="85" selection-start-line="37" selection-start-column="85" selection-end-line="37" selection-end-column="85" />
           <folding>
-            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
