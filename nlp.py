@@ -66,6 +66,3 @@ def getDiseaseFromSymptom(message):
     return final_disease
 
 """
-
-
-print(getDiseaseFromSymptom("My neck has a lump and it's swelling up"))
