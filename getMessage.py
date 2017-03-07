@@ -1,10 +1,11 @@
 import json
 from nlp import getDiseaseFromSymptom
+from firebase import firebase
 
 def getMessage(from_number, body, img_url):
-    with open('userData.json') as jsonFile:
-        data = json.load(jsonFile)
 
+    fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
+    data = fb.get('/Users', None)
     message = ""
     if from_number in data:
         if data[from_number]["current"] == "location":
@@ -40,14 +41,11 @@ def getMessage(from_number, body, img_url):
                 message = finalDisease
 
     else:
+        print("asdasd")
         data[from_number] = {"current": "location"}
-        json.dumps(data, 'userData.json')
         message = "Hi there! Welcome to MedicAI. Before we can help you out, we're going to need a couple of things to achieve better results. Please enter your address."
+    print(data)
+    result = fb.put('', '/Users', data)
+    print(message)
 
-    jsonFile.close()
-
-    jsonFile = open("userData.json", "w+")
-    jsonFile.write(json.dumps(data))
-    jsonFile.close()
-
-    return message
+print(getMessage("5163123123", "Hello my name is", "asd"))
