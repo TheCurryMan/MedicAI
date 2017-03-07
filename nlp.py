@@ -5,7 +5,7 @@ from DiseaseFinder import getPotentialDiseasesFromIds
 import re
 
 
-def getDiseaseFromSymptom(message):
+def getDiseaseFromSymptom(message, number):
     user_input = message
 
     letters_only = re.sub("[^a-zA-Z]", " ", user_input)
@@ -42,7 +42,7 @@ def getDiseaseFromSymptom(message):
     ids = []
     for i in the_real_symptoms_with_ids:
         ids.append(str(symptom_to_id[i]))
-    return getPotentialDiseasesFromIds(ids)
+    return getPotentialDiseasesFromIds(ids, number)
 
 """
     for disease in disease_symptoms:

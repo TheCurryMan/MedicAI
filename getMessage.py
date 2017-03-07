@@ -26,14 +26,14 @@ def getMessage(from_number, body, img_url):
             message = "Thanks for registering on MedicAI! How can we help you today?"
             if body == "M" or "m":
                 data[from_number]["current"] = "completed"
-                data[from_number]["location"] = "male"
+                data[from_number]["gender"] = "male"
             elif body == "F" or "f":
                 data[from_number]["current"] = "completed"
-                data[from_number]["location"] = "female"
+                data[from_number]["gender"] = "female"
             else:
                 message = "Please enter your gender as M (male) or F (female)"
         else:
-            finalDisease = getDiseaseFromSymptom(body)
+            finalDisease = getDiseaseFromSymptom(body, from_number)
 
             if finalDisease == "":
                 message = "We were unable to find a disease with those conditions. Try being more specific or upload a picture!"
