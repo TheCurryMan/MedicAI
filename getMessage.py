@@ -46,6 +46,6 @@ def getMessage(from_number, body, img_url):
         message = "Hi there! Welcome to MedicAI. Before we can help you out, we're going to need a couple of things to achieve better results. Please enter your address."
     print(data)
     result = fb.put('', '/Users', data)
-    print(message)
+    return message
 
 print(getMessage("5163123123", "Hello my name is", "asd"))
