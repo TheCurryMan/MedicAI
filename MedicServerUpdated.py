@@ -25,7 +25,7 @@ def hello_monkey():
     message = ""
     if from_number in data:
         if data[from_number]["current"] == "location":
-            data[from_number]["current"] == "age"
+            data[from_number]["current"] = "age"
             data[from_number]["location"] = body
             message = "The next thing we need to know is how old you are. Please enter your age."
 
