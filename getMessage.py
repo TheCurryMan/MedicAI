@@ -81,7 +81,7 @@ def getMessage(from_number, body, img_url):
 
     # If the user has never used our app, then we walk him through our intialization process
     else:
-        data[from_number] = {"current": "location", "language": "english"}
+        data[from_number] = {"current": "location", "language": "es"}
         message = "Hi there! Welcome to MedicAI. Before we can help you out, we're going to need a couple of things to achieve better results. Please enter your address."
 
     # Save the new data back to firebase
