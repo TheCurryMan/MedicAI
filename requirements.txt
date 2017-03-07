@@ -4,3 +4,5 @@ twilio>=3.3.6
 gunicorn==19.6.0
 nltk==3.2.2
 stemming==1.0.1
+python-firebase==1.2
+requests==2.9.1
