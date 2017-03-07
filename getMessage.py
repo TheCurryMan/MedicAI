@@ -2,6 +2,7 @@ import json
 from nlp import getDiseaseFromSymptom
 from firebase import firebase
 from translation import google
+
 """
 Overall message function that decides what to return back to the user
 Either gets data from user, returns symptom analysis, or restarts the user
@@ -9,15 +10,12 @@ Either gets data from user, returns symptom analysis, or restarts the user
 
 
 def getMessage(from_number, body, img_url):
-    language_data = {'Swahili': 'sw', 'Swedish': 'sv', 'Lithuanian': 'lt', 'Turkish': 'tr', 'Hindi': 'hi',
-                     'Dutch': 'nl', 'Korean': 'ko',
-                     'Danish': 'da', 'Bulgarian': 'bg', 'Latin': 'la', 'Finnish': 'fi', 'Ukrainian': 'uk',
-                     'Vietnamese': 'vi',
-                     'French': 'fr', 'Russian': 'ru', 'Thai': 'th', 'Filipino': 'tl', 'Greek': 'el', 'Latvian': 'lv',
-                     'English': 'en',
-                     'Italian': 'it', 'Portuguese': 'pt', 'Irish': 'ga', 'Chinese': 'zh-TW', 'Czech': 'cs',
-                     'Japanese': 'ja',
-                     'German': 'de', 'Spanish': 'es', 'Urdu': 'ur', 'Polish': 'pl', 'Arabic': 'ar'}
+    language_data = {'portuguese': 'pt', 'irish': 'ga', 'chinese': 'zh-TW', 'danish': 'da', 'czech': 'cs',
+                     'japanese': 'ja', 'spanish': 'es', 'urdu': 'ur', 'polish': 'pl', 'arabic': 'ar', 'swahili': 'sw',
+                     'vietnamese': 'vi', 'german': 'de', 'hindi': 'hi', 'dutch': 'nl', 'korean': 'ko', 'swedish': 'sv',
+                     'bulgarian': 'bg', 'latin': 'la', 'ukrainian': 'uk', 'lithuanian': 'lt', 'french': 'fr',
+                     'russian': 'ru', 'thai': 'th', 'finnish': 'fi', 'filipino': 'tl', 'turkish': 'tr', 'greek': 'el',
+                     'latvian': 'lv', 'english': 'en', 'italian': 'it'}
 
     # Initialize Firebase Application and get user data
     fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
@@ -84,3 +82,6 @@ def getMessage(from_number, body, img_url):
     result = fb.put('', '/Users', data)
     message = google(message, language_data[data[from_number]["language"]])
     return message
+
+
+getMessage("+14252298079", "I need help", "asd")
