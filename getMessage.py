@@ -4,10 +4,19 @@ from firebase import firebase
 
 def getMessage(from_number, body, img_url):
 
+
     fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
     data = fb.get('/Users', None)
+
     message = ""
     if from_number in data:
+
+        if body == "R":
+            data[from_number]["current"] = "location"
+            result = fb.put('', '/Users', data)
+            message = "Hi there! Welcome to MedicAI. Before we can help you out, we're going to need a couple of things to achieve better results. Please enter your address."
+            return message
+
         if data[from_number]["current"] == "location":
             data[from_number]["current"] = "age"
             data[from_number]["location"] = body
@@ -48,4 +57,4 @@ def getMessage(from_number, body, img_url):
     result = fb.put('', '/Users', data)
     return message
 
-print(getMessage("5163123123", "Hello my name is", "asd"))
+print(getMessage("5163123123", "R", "asd"))
