@@ -34,6 +34,3 @@ def getLocations(disease, number):
     result = fb.put("", "/Diseases", data)
 
     return total
-
-
-print(getLocations("Influenza", "+14252298079"))

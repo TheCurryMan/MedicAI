@@ -77,9 +77,10 @@ def getPotentialDiseasesFromIds(ids, number):
         finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName']) + "\n\n"
         finalData += "Likelihood: " + str(round(int(respjson[i]['Issue']['Accuracy']), 3)) + "%\n\n"
         if getLocations(str(respjson[i]['Issue']['ProfName']), number) > 4:
-            finalData += "Warning! We've detected a high number of " + str(respjson[i]['Issue']['ProfName'])
-            " cases in your locality (" + str(getLocations(str(respjson[i]['Issue']['ProfName']),
-                                                           number)) + ") making the likelihood of this disease much higher." + "\n\n"
+            finalData += "Warning! We've detected a high number of " + str(
+                respjson[i]['Issue']['ProfName']) + " cases in your locality (" + str(
+                getLocations(str(respjson[i]['Issue']['ProfName']),
+                             number)) + ") making the likelihood of this disease much higher." + "\n\n"
         with open('details.json') as data_file:
             data = json.load(data_file)
             finalData += data[str(respjson[i]["Issue"]["ID"])]["TreatmentDescription"] + "\n"
