@@ -70,7 +70,7 @@ def getPotentialDiseasesFromIds(ids, number):
 
     #Parse through JSON and get Disease Data + Description
     for i in range(0, len(respjson)):
-        if counter == 2:
+        if counter == 1:
             break
         finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName']) + "\n"
         finalData += "Likelihood: " + str(round(int(respjson[i]['Issue']['Accuracy']), 3)) + "%\n"

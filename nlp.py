@@ -46,6 +46,7 @@ def getDiseaseFromSymptom(message, number):
     #Trying with the API
 
     the_real_symptoms_with_ids = list(set(symptoms_having_ids).intersection(stemmed_words))
+    print(the_real_symptoms_with_ids)
     ids = []
     for i in the_real_symptoms_with_ids:
         ids.append(str(symptom_to_id[i]))
@@ -73,3 +74,5 @@ def getDiseaseFromSymptom(message, number):
     return final_disease
 
 """
+
+getDiseaseFromSymptom("I have a very high fever, and a slight cough. There's sputum and I also have severe chest.", "+14252298079")
