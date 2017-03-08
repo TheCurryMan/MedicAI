@@ -89,4 +89,3 @@ def getMessage(from_number, body, img_url):
     message = bing(message, dst=data[from_number]["language"])
     return message
 
-print(getMessage("+14252298079", "language - english", ""))
