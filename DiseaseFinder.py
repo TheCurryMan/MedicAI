@@ -1,11 +1,13 @@
 import urllib2
 import json
 from firebase import firebase
+from locationBasedAnalysis import getLocations
 
 """
 Calls HealthService API to find the disease analysis based on symptom ids passed in
 Also gets the mapped disease description from the API data
 """
+
 
 class UrlBuilder:
     def __init__(self, base):
@@ -36,14 +38,15 @@ class UrlBuilder:
     def getParams(self):
         return self.params
 
+
 def getPotentialDiseasesFromIds(ids, number):
     print(ids)
 
-    #Initialize firebase and get User data
+    # Initialize firebase and get User data
     fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
     data = fb.get("/Users", None)
 
-    #Set up URL for API calling
+    # Set up URL for API calling
     URL = "https://sandbox-healthservice.priaid.ch/diagnosis?"
     gender = data[number]["gender"]
     year_of_birth = str(2017 - int(data[number]["age"]))
@@ -59,7 +62,7 @@ def getPotentialDiseasesFromIds(ids, number):
     base.addParam("token", token)
     base.addParam("language", language)
 
-    #Get data from URL
+    # Get data from URL
     req = urllib2.Request(base.getURL())
     data = urllib2.urlopen(req).read()
     respjson = json.loads(data.decode("utf-8"))
@@ -67,13 +70,16 @@ def getPotentialDiseasesFromIds(ids, number):
     finalData = ""
     counter = 0
 
-
-    #Parse through JSON and get Disease Data + Description
+    # Parse through JSON and get Disease Data + Description
     for i in range(0, len(respjson)):
         if counter == 1:
             break
-        finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName']) + "\n"
-        finalData += "Likelihood: " + str(round(int(respjson[i]['Issue']['Accuracy']), 3)) + "%\n"
+        finalData += "Name of disease: " + str(respjson[i]['Issue']['ProfName']) + "\n\n"
+        finalData += "Likelihood: " + str(round(int(respjson[i]['Issue']['Accuracy']), 3)) + "%\n\n"
+        if getLocations(str(respjson[i]['Issue']['ProfName']), number) > 4:
+            finalData += "Warning! We've detected a high number of " + str(respjson[i]['Issue']['ProfName'])
+            " cases in your locality (" + str(getLocations(str(respjson[i]['Issue']['ProfName']),
+                                                           number)) + ") making the likelihood of this disease much higher." + "\n\n"
         with open('details.json') as data_file:
             data = json.load(data_file)
             finalData += data[str(respjson[i]["Issue"]["ID"])]["TreatmentDescription"] + "\n"

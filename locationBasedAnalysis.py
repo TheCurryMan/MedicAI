@@ -2,7 +2,7 @@ from geopy.geocoders import Nominatim
 from geopy.distance import vincenty
 from firebase import firebase
 
-def getLocations(disease, currentPercent, number):
+def getLocations(disease, number):
 
     #Initialize Nominatim
     geolocator = Nominatim()
@@ -36,4 +36,4 @@ def getLocations(disease, currentPercent, number):
     return total
 
 
-print(getLocations("Influenza", "80%", "+14252298079"))
+print(getLocations("Influenza", "+14252298079"))
