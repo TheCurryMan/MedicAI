@@ -29,8 +29,11 @@ def getLocations(disease, number):
                 #If distance between both points is less than 10 miles, increment total
                 if vincenty(curLatLong, locLatLong).miles <= 10:
                     total += 1
-
+    if disease not in data:
+        data[disease] = {}
     data[disease][current_user["location"]] = number
     result = fb.put("", "/Diseases", data)
 
     return total
+
+getLocations("Gastroesophageal reflux disease", "+14252298079")
