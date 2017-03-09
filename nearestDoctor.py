@@ -22,6 +22,6 @@ def getNearestDoctor(number):
     doc = respjson["results"][0]
     docName = doc["name"]
     distance = vincenty(tuple(curLatLong),(float(doc["geometry"]["location"]["lat"]),float(doc["geometry"]["location"]["lng"]))).miles
-    retstr = "Your nearest doctor is " + docName + ". They are " + str(round(distance,1)) + " miles away"
+    retstr = "Your nearest doctor is " + docName + ". He/She is " + str(round(distance,1)) + " miles away"
 
     return retstr
