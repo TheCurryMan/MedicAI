@@ -16,12 +16,12 @@ def getNearestDoctor(number):
     location = geolocator.geocode(user["location"])
     curLatLong = [location.latitude, location.longitude]
 
-    url = "https://maps.googleapis.com/maps/api/place/textsearch/json?location=" + ','.join([str(x) for x in curLatLong]) + "&type=hospital&key=" + gMapsAPI
+    url = "https://maps.googleapis.com/maps/api/place/textsearch/json?location=" + ','.join([str(x) for x in curLatLong]) + "&type=doctor&key=" + gMapsAPI
     respjson = requests.get(url).json()
 
     doc = respjson["results"][0]
     docName = doc["name"]
     distance = vincenty(tuple(curLatLong),(float(doc["geometry"]["location"]["lat"]),float(doc["geometry"]["location"]["lng"]))).miles
-    retstr = "Your nearest clinic is " docName + ". It is " + str(round(distance,1)) + " miles away"
+    retstr = "Your nearest doctor is " docName + ". They are " + str(round(distance,1)) + " miles away"
 
     return retstr
