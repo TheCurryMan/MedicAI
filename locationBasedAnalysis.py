@@ -35,3 +35,20 @@ def getLocations(disease, number):
     result = fb.put("", "/Diseases", data)
 
     return total
+
+
+def getCoordinates():
+
+    #Initialize Nominatim
+    geolocator = Nominatim()
+
+    # Initialize Firebase Application and get user data
+    fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
+    data = fb.get('/Diseases', None)
+    locations = [[]]
+    for i in data:
+        for location in data[i]:
+            loc = geolocator.geocode(location)
+            locLatLong = [loc.latitude, loc.longitude, i]
+            locations.append(locLatLong)
+    return locations

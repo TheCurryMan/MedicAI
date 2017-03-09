@@ -2,6 +2,7 @@ from flask import Flask, request, render_template
 import twilio.twiml
 from twilio.rest import TwilioRestClient
 from getMessage import getMessage
+from locationBasedAnalysis import getCoordinates
 import json
 
 """
@@ -34,9 +35,12 @@ def hello_monkey():
     resp.message(message)
     return str(resp)
 
-@app.route('/crawl')
-def crawl():
-    return render_template('crawl.html', myfunction=search)
+@app.route('/map')
+def map():
+
+    coords = getCoordinates()
+
+    return render_template('index.html', data=coords)
 
 
 if __name__ == "__main__":
