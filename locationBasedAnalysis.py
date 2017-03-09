@@ -45,10 +45,10 @@ def getCoordinates():
     # Initialize Firebase Application and get user data
     fb = firebase.FirebaseApplication("https://medicai-4e398.firebaseio.com/", None)
     data = fb.get('/Diseases', None)
-    locations = [[]]
+    locations = []
     for i in data:
         for location in data[i]:
             loc = geolocator.geocode(location)
-            locLatLong = [loc.latitude, loc.longitude, i]
+            locLatLong = [loc.latitude, loc.longitude, str(i)]
             locations.append(locLatLong)
     return locations

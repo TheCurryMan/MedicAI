@@ -17,7 +17,7 @@ client = TwilioRestClient(account_sid, auth_token)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_monkey():
-
+    """
     #Getting actual message from user
     body = request.values.get('Body', None)
 
@@ -34,6 +34,13 @@ def hello_monkey():
     resp = twilio.twiml.Response()
     resp.message(message)
     return str(resp)
+    """
+
+    coords = getCoordinates()
+
+    print(coords)
+
+    return render_template('index.html', data=coords)
 
 @app.route('/map')
 def map():

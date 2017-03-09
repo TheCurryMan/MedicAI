@@ -93,14 +93,16 @@
             // Create the Google Map using our element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
 
-            var data = '{{ data }}';
-            for (var object in data) {
+            var locations = {{ data|safe }};
+            console.log(locations.length)
+            for (var i = 0; i < locations.length; i++)
+            {
+                var loc = locations[i]
 
-                // Let's also add a marker while we're at it
                 var marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(object[0], object[1]),
+                    position: new google.maps.LatLng(loc[0], loc[1]),
                     map: map,
-                    title: object[2]
+                    title: loc[2]
                 });
 
             }
