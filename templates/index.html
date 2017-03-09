@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Snazzy Maps Super Simple Example</title>
+
+    <style type="text/css">
+        /* Set a size for our map container, the Google Map will take up 100% of this container */
+        #map {
+            width: 1800px;
+            height: 800px;
+        }
+    </style>
+
+    <!--
+        You need to include this script tag on any page that has a Google Map.
+
+        The following script tag will work when opening this example locally on your computer.
+        But if you use this on a localhost server or a live website you will need to include an API key.
+        Sign up for one here (it's free for small usage):
+            https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+        After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+    -->
+
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdPDYdMJ8YhUx2vJBncVFBar48skM2tJ0"></script>
+
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            // Basic options for a simple Google Map
+            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+            var mapOptions = {
+                // How zoomed in you want the map to start at (always required)
+                zoom: 11,
+
+                // The latitude and longitude to center the map (always required)
+                center: new google.maps.LatLng(37.3093160, -122.0040510), // New York
+
+                // How you would like to style the map.
+                // This is where you would paste any style found on Snazzy Maps.
+                styles: [{
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#333739"}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#4c4c4c"}]
+                }, {
+                    "featureType": "poi",
+                    "stylers": [{"color": "#4C4C4C"}, {"lightness": -7}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#555555"}, {"lightness": -23}]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                }, {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#555555"}, {"visibility": "off"}, {"lightness": -15}]
+                    }, {
+                        "featureType": "road.local",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#777777"}, {"lightness": -18}]
+                    }, {
+                        "elementType": "labels.text.fill",
+                        "stylers": [{"color": "#777777"}]
+                    }, {"elementType": "labels.text.stroke", "stylers": [{"visibility": "off"}]}, {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [{"color": "#666666"}, {"lightness": -34}]
+                    }, {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [{"visibility": "on"}, {"color": "#333739"}, {"weight": 0.8}]
+                    },]
+            };
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(37.3093160, -122.0040510),
+                map: map,
+                title: 'Snazzy!'
+            });
+        }
+    </script>
+</head>
+<body height="100%" width="100%">
+<h1>Snazzy Maps Super Simple Example</h1>
+<h2><a href="https://snazzymaps.com/style/53/flat-map" target="_blank">Flat Map</a></h2>
+
+<!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+<div id="map"></div>
+</body>
+</html>

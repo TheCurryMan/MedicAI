@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 import twilio.twiml
 from twilio.rest import TwilioRestClient
 from getMessage import getMessage
@@ -34,6 +34,9 @@ def hello_monkey():
     resp.message(message)
     return str(resp)
 
+@app.route('/crawl')
+def crawl():
+    return render_template('crawl.html', myfunction=search)
 
 
 if __name__ == "__main__":

@@ -35,5 +35,3 @@ def getLocations(disease, number):
     result = fb.put("", "/Diseases", data)
 
     return total
-
-getLocations("Gastroesophageal reflux disease", "+14252298079")
