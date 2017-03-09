@@ -3,7 +3,7 @@ from nltk.stem import *
 from stemming.porter2 import stem
 from DiseaseFinder import getPotentialDiseasesFromIds
 import re
-from nearestDocter import getNearestDoctor
+from nearestDoctor import getNearestDoctor
 
 """
 Performs NLP on the body receieved to figure out the key symptoms in the user message
