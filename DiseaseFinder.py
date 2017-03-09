@@ -2,7 +2,7 @@ import urllib2
 import json
 from firebase import firebase
 from locationBasedAnalysis import getLocations
-
+from nearestDoctor import getNearestDoctor
 """
 Calls HealthService API to find the disease analysis based on symptom ids passed in
 Also gets the mapped disease description from the API data
@@ -84,6 +84,7 @@ def getPotentialDiseasesFromIds(ids, number):
         with open('details.json') as data_file:
             data = json.load(data_file)
             finalData += data[str(respjson[i]["Issue"]["ID"])]["TreatmentDescription"] + "\n"
+        finalData += "\n" + getNearestDoctor(number)
         counter += 1
 
     return finalData

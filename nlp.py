@@ -3,7 +3,6 @@ from nltk.stem import *
 from stemming.porter2 import stem
 from DiseaseFinder import getPotentialDiseasesFromIds
 import re
-from nearestDoctor import getNearestDoctor
 
 """
 Performs NLP on the body receieved to figure out the key symptoms in the user message
@@ -17,7 +16,7 @@ def getDiseaseFromSymptom(message, number):
 
     letters_only = re.sub("[^a-zA-Z]", " ", user_input)
 
-    lower_case = letters_only.lower()
+    lower_case = letters_only.lower()x
 
     words = lower_case.split()
 
@@ -51,7 +50,7 @@ def getDiseaseFromSymptom(message, number):
     ids = []
     for i in the_real_symptoms_with_ids:
         ids.append(str(symptom_to_id[i]))
-    return getPotentialDiseasesFromIds(ids, number) + "\n" + getNearestDoctor(number)
+    return getPotentialDiseasesFromIds(ids, number)
 
 """
     for disease in disease_symptoms:
