@@ -74,5 +74,3 @@ def getDiseaseFromSymptom(message, number):
     return final_disease
 
 """
-
-getDiseaseFromSymptom("I have a very high fever, and a slight cough. There's sputum and I also have severe chest.", "+14252298079")
