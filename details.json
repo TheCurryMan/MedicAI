@@ -518,5 +518,11 @@
         "PossibleSymptoms": "Abdominal pain,Fever,Back pain",
         "TreatmentDescription": "An infection of the urinary tract (also called a UTI or cystitis) is usually harmless and requires no treatment in women without symptoms.  Women and men affected by symptoms usually require treatment with antibiotics.  An infection of the upper urinary tract (pyelonephritis) can spread to the bloodstream and thus requires treatment with antibiotics.",
         "Name": "Urinary tract infection"
+    },
+    "Chicken Pox": {
+        "TreatmentDescription": "The best way to prevent chickenpox is to get the chickenpox vaccine. To help relieve the symptoms and prevent skin infections, Calamine lotion and colloidal oatmeal can be used daily. Keeping fingernails trimmed short may help prevent skin infections caused by scratching blisters. Use non-aspirin medications, such as acetaminophen, to relieve fever from chickenpox."
+    },
+    "Goitre": {
+        "TreatmentDescription": "If your goitre is small and doesn't cause problems, take a wait-and-see approach.  If you have hypothyroidism, thyroid hormone replacement with levothyroxine (Levoxyl, Synthroid, Tirosint) will resolve the symptoms of hypothyroidism and reduce the size of the goitre. Radioactive iodine is used to treat an overactive thyroid gland. If worst comes to worse, you can undergo surgery to get the thyroid gland removed."
     }
 }
