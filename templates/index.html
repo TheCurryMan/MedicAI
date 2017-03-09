@@ -34,10 +34,10 @@
             // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
-                zoom: 11,
+                zoom: 12,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(37.3093160, -122.0040510), // New York
+                center: new google.maps.LatLng(37.3093160, -122.0040510), // My home
 
                 // How you would like to style the map.
                 // This is where you would paste any style found on Snazzy Maps.
@@ -65,25 +65,25 @@
                         }
                     ]
                 }, {
-                        "featureType": "road.arterial",
-                        "elementType": "geometry",
-                        "stylers": [{"color": "#555555"}, {"visibility": "off"}, {"lightness": -15}]
-                    }, {
-                        "featureType": "road.local",
-                        "elementType": "geometry",
-                        "stylers": [{"color": "#777777"}, {"lightness": -18}]
-                    }, {
-                        "elementType": "labels.text.fill",
-                        "stylers": [{"color": "#777777"}]
-                    }, {"elementType": "labels.text.stroke", "stylers": [{"visibility": "off"}]}, {
-                        "featureType": "transit",
-                        "elementType": "geometry",
-                        "stylers": [{"color": "#666666"}, {"lightness": -34}]
-                    }, {
-                        "featureType": "administrative",
-                        "elementType": "geometry",
-                        "stylers": [{"visibility": "on"}, {"color": "#333739"}, {"weight": 0.8}]
-                    },]
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#555555"}, {"visibility": "off"}, {"lightness": -15}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#777777"}, {"lightness": -18}]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#777777"}]
+                }, {"elementType": "labels.text.stroke", "stylers": [{"visibility": "off"}]}, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#666666"}, {"lightness": -34}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [{"visibility": "on"}, {"color": "#333739"}, {"weight": 0.8}]
+                },]
             };
 
             // Get the HTML DOM element that will contain your map
@@ -95,15 +95,48 @@
 
             var locations = {{ data|safe }};
             console.log(locations.length)
-            for (var i = 0; i < locations.length; i++)
-            {
+            for (var i = 0; i < locations.length; i++) {
                 var loc = locations[i]
 
+                /*
+
+                 var circle = new google.maps.Circle({
+                 strokeColor: '#00CCFF',
+                 strokeOpacity: 0.8,
+                 strokeWeight: 2,
+                 fillColor: '#0099CC',
+                 fillOpacity: 0.35,
+                 map: map,
+                 center: {lat: loc[0], lng: loc[1]},
+                 radius: 10000
+
+                 })  */
+
                 var marker = new google.maps.Marker({
+
                     position: new google.maps.LatLng(loc[0], loc[1]),
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        fillOpacity: 0.5,
+                        fillColor: '#0099CC',
+                        strokeOpacity: 1.0,
+                        strokeColor: '#00CCFF',
+                        strokeWeight: 3.0,
+                        scale: 30
+                    },
                     map: map,
                     title: loc[2]
                 });
+
+                var infowindow = new google.maps.InfoWindow();
+
+                google.maps.event.addListener(marker, 'mouseover', (function (marker, i) {
+                return function () {
+                    console.log(loc);
+                    infowindow.setContent(locations[i][2]);
+                    infowindow.open(map, marker);
+                }
+            })(marker, i));
 
             }
 
