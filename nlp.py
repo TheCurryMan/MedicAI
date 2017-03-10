@@ -31,7 +31,7 @@ def getDiseaseFromSymptom(message, number):
     if val != "":
         return val
 
-    symptoms_having_ids = ['dizzi', 'weight', 'tired', 'feel', 'heartburn', 'back', 'menstruat', 'paralysi', 'skin', 'go', 'stomach', 'cold', 'miss', 'sleepless', 'eye', 'droop', 'earach', 'memori', 'nervous', 'hot', 'chest', 'lip', 'nausea', 'earli', 'headach', 'fever', 'pain', 'reduc', 'itch', 'swollen', 'burn', 'weak', 'stuffi', 'sneez', 'sore', 'hiccup', 'vomit', 'wheez', 'fast,', 'increas', 'tremor', 'cough', 'runni', 'chill', 'palpit', 'short', 'neck', 'sputum', 'tear', 'abdomin', 'cheek', 'dri', 'anxieti', 'sweat', 'night', 'unconsciousness,']
+    symptoms_having_ids = ['dizzi', 'weight', 'tired', 'feel', 'heartburn', 'back', 'menstruat', 'paralysi', 'skin', 'go', 'stomach', 'cold', 'miss', 'sleepless', 'eye', 'droop', 'earach', 'memori', 'nervous', 'hot', 'chest', 'lip', 'nausea', 'earli', 'headach', 'fever', 'reduc', 'itch', 'swollen', 'burn', 'weak', 'stuffi', 'sneez', 'sore', 'hiccup', 'vomit', 'wheez', 'fast,', 'increas', 'tremor', 'cough', 'runni', 'chill', 'palpit', 'short', 'neck', 'sputum', 'tear', 'abdomin', 'cheek', 'dri', 'anxieti', 'sweat', 'night', 'unconsciousness,']
 
     symptom_to_id = {'dizzi': 207, 'weight': 23, 'tired': 16, 'feel': 76, 'heartburn': 45, 'back': 104, 'menstruat': 112, 'paralysi': 140, 'skin': 124, 'stomach': 179, 'sweat': 139, 'sleep': 52, 'eye': 33, 'droop': 244, 'earach': 87, 'memori': 235, 'nervous': 114, 'chest': 17, 'lip': 35, 'nausea': 44, 'earli': 92, 'headach': 9, 'fever': 11, 'appetit': 54, 'itch': 96, 'swollen': 169, 'burn': 46, 'weak': 56, 'stuffi': 28, 'sneez': 95, 'sore': 13, 'hiccup': 122, 'vomit': 181, 'wheez': 30, 'thirst': 40, 'tremor': 115, 'cough': 15, 'runni': 14, 'chill': 175, 'palpit': 37, 'neck': 136, 'sputum': 64, 'tear': 211, 'abdomin': 10, 'cheek': 170, 'dri': 273, 'anxieti': 238, 'sweat': 138, 'night': 133, 'unconsciousness,': 144}
 
@@ -40,7 +40,7 @@ def getDiseaseFromSymptom(message, number):
     ids = []
     for i in the_real_symptoms_with_ids:
         ids.append(str(symptom_to_id[i]))
-    getPotentialDiseasesFromIds(ids, number)
+    return getPotentialDiseasesFromIds(ids, number)
 
 
 

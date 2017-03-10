@@ -21,7 +21,6 @@ def getLocations(disease, number):
             curLoc = geolocator.geocode(current_user["location"])
             curLatLong = (curLoc.latitude, curLoc.longitude)
             for location in data[i]:
-                print(location)
                 #Get the details of each location in firebase of disease provided
                 loc = geolocator.geocode(location)
                 locLatLong = (loc.latitude, loc.longitude)
@@ -34,7 +33,7 @@ def getLocations(disease, number):
         total = 0
     data[disease][current_user["location"]] = number
     result = fb.put("", "/Diseases", data)
-
+    print(total)
     return total
 
 

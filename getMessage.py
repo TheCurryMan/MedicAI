@@ -87,5 +87,8 @@ def getMessage(from_number, body, img_url):
 
     # Save the new data back to firebase
     result = fb.put('', '/Users', data)
+    print(message)
     message = bing(message, dst=data[from_number]["language"])
     return message
+
+print(getMessage("+14252298079", "I have a very high fever, and a sligh cough. There's sputum and I also have severe chest pain", ""))
