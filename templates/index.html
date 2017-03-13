@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Snazzy Maps Super Simple Example</title>
+    <title>MedicAI Location Analysis</title>
 
     <style type="text/css">
         /* Set a size for our map container, the Google Map will take up 100% of this container */
         #map {
-            width: 1800px;
-            height: 800px;
+            position: fixed !important;
+            width: 100%;
+            height: 100%;
         }
     </style>
 
@@ -112,9 +113,25 @@
                  radius: 10000
 
                  })  */
+
                 if (diseaseToColor[loc[2]] === undefined) {
                     diseaseToColor[loc[2]] = colors.shift()
+                    var list = document.getElementById('legend');
+                    var key = loc[2];
+                    var entry = document.createElement('p');
+                    entry.appendChild(document.createTextNode(loc[2]));
+                    entry.style.backgroundColor = diseaseToColor[loc[2]];
+                    entry.style.height = "50px";
+                    entry.style.fontFamily = "Arial";
+                    entry.style.margin = "0px";
+                    entry.style.lineHeight = "50px";
+                    entry.style.textAlign = "center";
+                    list.appendChild(entry);
+                    list.style.height = 50 * Object.keys(diseaseToColor).length + "px"
                 }
+
+
+
                 var marker = new google.maps.Marker({
 
                     position: new google.maps.LatLng(loc[0], loc[1]),
@@ -147,13 +164,14 @@
         }
     </script>
 </head>
-<body height="100%" width="100%">
-<h1>Snazzy Maps Super Simple Example</h1>
-<h2><a href="https://snazzymaps.com/style/53/flat-map" target="_blank">Flat Map</a></h2>
-
+<body height="100%" width="100%;" style="margin:0px !important;">
 <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+<div id="mapContainer" style="width: 100%; height: 100%;">
+    <h1 style="position:absolute; z-index: 999; color: white; padding: 30px 30px 30px 5px; font-family: 'Open Sans'">MedicAI Location Analysis</h1>
+    <h2 style="position:absolute;"><a href="https://snazzymaps.com/style/53/flat-map" target="_blank">Flat Map</a></h2>
+    <div id="map"></div> </div>
+<div id="legend" style="position: fixed; width: 20%; background-color: white; left: 5%; bottom: 5%">
 
-<div id="map"></div>
-<div id="legend" style="position: fixed; height: 40%; width: 20%; background-color: white; left: 5%; top: 20%"></div>
+</div>
 </body>
 </html>
