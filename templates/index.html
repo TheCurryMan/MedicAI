@@ -92,7 +92,8 @@
 
             // Create the Google Map using our element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
-
+            var diseaseToColor = {}
+            var colors = ["Red", "Orange", "Yellow", "Pink", "Blue"]
             var locations = {{ data|safe }};
             console.log(locations.length)
             for (var i = 0; i < locations.length; i++) {
@@ -111,18 +112,20 @@
                  radius: 10000
 
                  })  */
-
+                if (diseaseToColor[loc[2]] === undefined) {
+                    diseaseToColor[loc[2]] = colors.shift()
+                }
                 var marker = new google.maps.Marker({
 
                     position: new google.maps.LatLng(loc[0], loc[1]),
                     icon: {
                         path: google.maps.SymbolPath.CIRCLE,
                         fillOpacity: 0.5,
-                        fillColor: '#0099CC',
+                        fillColor: diseaseToColor[loc[2]],
                         strokeOpacity: 1.0,
-                        strokeColor: '#00CCFF',
+                        strokeColor: diseaseToColor[loc[2]],
                         strokeWeight: 3.0,
-                        scale: 30
+                        scale: 35
                     },
                     map: map,
                     title: loc[2]
@@ -149,6 +152,8 @@
 <h2><a href="https://snazzymaps.com/style/53/flat-map" target="_blank">Flat Map</a></h2>
 
 <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+
 <div id="map"></div>
+<div id="legend" style="position: fixed; height: 40%; width: 20%; background-color: white; left: 5%; top: 20%"></div>
 </body>
 </html>
