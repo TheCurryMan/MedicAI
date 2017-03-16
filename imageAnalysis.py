@@ -11,7 +11,7 @@ import numpy as np
 import warnings
 import random
 
-STANDARD_SIZE = (600, 345)
+STANDARD_SIZE = (300, 172)
 
 def flatten_image(img):
 	"""
@@ -41,7 +41,7 @@ warnings.filterwarnings("ignore")
 inputs = []
 outputs = []
 
-for fname in os.listdir('/Users/Avinash/Documents/chickenpox/')[:-17]:
+for fname in os.listdir('/Users/Avinash/Documents/chickenpox/')[:-4]:
 	try:
 		temp = loadImage("/Users/Avinash/Documents/chickenpox/" + fname)
 		if temp != "L":
@@ -60,9 +60,13 @@ for fname in os.listdir('/Users/Avinash/Documents/nonchickenpox/')[:-4]:
 	except:
 		pass
 
+print(len(inputs))
+print(len(outputs))
+
 X = np.array(inputs)
 Y = np.array(outputs)
 model = svm.SVC()
 model.fit(X,Y)
-print(model.predict(loadImage("/Users/Avinash/Documents/chickenpox/c66.jpg")))
-print(model.predict(loadImage("/Users/Avinash/Documents/nonchickenpox/n67.jpg")))
+while True:
+	input = raw_input("Enter filename: ")
+	print(model.predict(loadImage("/Users/Avinash/Documents/" + input)))
