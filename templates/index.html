@@ -94,8 +94,8 @@
             // Create the Google Map using our element and options defined above
             var map = new google.maps.Map(mapElement, mapOptions);
             var diseaseToColor = {}
-            var colors = ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9',
-   '#f15c80', '#e4d354', '#2b908f', '#f45b5b', '#91e8e1']
+            var colors = ['#ff3030', '#ff34b3', '#ffc125', '#0000ff', '#00bfff',
+   '#2e8b57', '#b23aee', '#2b908f', '#f45b5b', '#91e8e1']
             var locations = {{ data|safe }};
             console.log(locations.length)
             for (var i = 0; i < locations.length; i++) {
