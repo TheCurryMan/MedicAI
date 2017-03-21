@@ -1,6 +1,7 @@
 #IMPORT MODULES
 import sys
 import os
+import pickle
 if ".".join([str(x) for x in sys.version_info[:2]]) != "3.4":
 	print("This script requires Python version 3.4. Relaunching now...")	 
 	os.system('python3.4 main.py')
@@ -15,7 +16,7 @@ STANDARD_SIZE = (300, 172)
 
 def flatten_image(img):
 	"""
-	takes in an (m, n) numpy array and flattens it 
+	takes in an (m, n) numpy array and flattens it
 	into an array of shape (1, m * n)
 	"""
 	if len(img.shape) != 2 or img.shape[1] != 3:
@@ -67,6 +68,12 @@ X = np.array(inputs)
 Y = np.array(outputs)
 model = svm.SVC()
 model.fit(X,Y)
+
+with open('chickenpox.pkl', 'wb') as f:
+	pickle.dump(model,f)
+
+
 while True:
 	input = raw_input("Enter filename: ")
-	print(model.predict(loadImage("/Users/Avinash/Documents/" + input)))
+	if(model.predict(loadImage("/Users/Avinash/Documents/" + input)))[0] == 1:
+

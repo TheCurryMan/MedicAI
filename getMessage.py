@@ -2,6 +2,7 @@ import json
 from nlp import getDiseaseFromSymptom
 from firebase import firebase
 from translation import bing
+from getDiagnosisFromImage import getImage
 
 """
 Overall message function that decides what to return back to the user
@@ -72,7 +73,11 @@ def getMessage(from_number, body, img_url):
 
         # Start getting symptom analysis from text
         else:
-            finalDisease = getDiseaseFromSymptom(body, from_number)
+            print("THIS IS THE IMAGE URL: " + img_url)
+            if img_url != "":
+                finalDisease = getImage(img_url, from_number)
+            else:
+                finalDisease = getDiseaseFromSymptom(body, from_number)
 
             if finalDisease == "":
                 message = "We were unable to find a disease with those conditions. Try being more specific or upload a picture!"
