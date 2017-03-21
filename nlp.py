@@ -16,15 +16,10 @@ Lemmitization + Tokenization + Stemming -> Intersect data and map symptoms to id
 def getDiseaseFromSymptom(message, number):
 
     user_input = message
-
     letters_only = re.sub("[^a-zA-Z]", " ", user_input)
-
     lower_case = letters_only.lower()
-
     words = lower_case.split()
-
     words = [w for w in words if not w in stopwords.words("english")]
-
     stemmed_words = [stem(word) for word in words]
 
     val = getDiseaseFromLocalValues(stemmed_words, number)
@@ -70,7 +65,7 @@ def getDiseaseFromLocalValues(stemmed_words, number):
             final_disease = disease
             maxNum = value
 
-    if maxNum >= 5:
+    if maxNum >= 4:
         finalData = ""
         finalData += "Name of disease: " + final_disease + "\n\n"
         calc = 80 + 2*(int(maxNum)-5)
