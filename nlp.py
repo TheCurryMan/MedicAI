@@ -46,7 +46,7 @@ def getDiseaseFromLocalValues(stemmed_words, number):
     disease_symptoms = {"Chicken Pox":[('blister', 1), ('scab',1), ('ulcer',1), ('dot', 3), ('spot', 3), ('fatigu', 1), ('fever',1), ('appetit',1), ('headach',1), ('itch',1), ('swell',1)], "Goitre": [('lump', 3), ('swell', 1), ('coughing',1), ('breath',1), ('throat', 3), ('neck', 3)]}
 
     actual_symptoms = set(stemmed_words).intersection(no_duplicate_stemmed_symptoms)
-
+    print(stemmed_words)
     maxNum = 0
     final_disease = ""
 
@@ -58,12 +58,15 @@ def getDiseaseFromLocalValues(stemmed_words, number):
             real_symptoms.append(i[0])
             vals.append(i[1])
         list_of_symptoms = list(set(real_symptoms).intersection(actual_symptoms))
+        print(list_of_symptoms)
         value = sum([vals[real_symptoms.index(w)] for w in list_of_symptoms])
         if maxNum >= value:
             pass
         else:
             final_disease = disease
             maxNum = value
+
+    print(maxNum)
 
     if maxNum >= 4:
         finalData = ""
@@ -84,3 +87,5 @@ def getDiseaseFromLocalValues(stemmed_words, number):
 
         return finalData
     return ""
+
+print(getDiseaseFromSymptom("I have red spots all over my body and am feeling quite feverish", "+14252298079"))
