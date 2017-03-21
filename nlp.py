@@ -68,7 +68,9 @@ def getDiseaseFromLocalValues(stemmed_words, number):
     if maxNum >= 4:
         finalData = ""
         finalData += "Name of disease: " + final_disease + "\n\n"
-        calc = 80 + 2*(int(maxNum)-5)
+        calc = 90 + 2*(int(maxNum)-4)
+        if calc > 100:
+            calc = 100
         finalData += "Likelihood: " + str(calc) + "%\n\n"
         if getLocations(final_disease, number) > 4:
             finalData += "Warning! We've detected a high number of " + str(
