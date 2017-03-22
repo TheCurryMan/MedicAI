@@ -39,7 +39,7 @@ def getImage(imageURL, number):
     model = svm.SVC()
     with open('chickenpox.pkl', 'rb') as f:
         model = pickle.load(f)
-
+    print(model.predict(loadImage(im)))[0]
     if(model.predict(loadImage(im)))[0] == 1:
         final_disease = "Chicken Pox"
         finalData = ""
@@ -60,4 +60,4 @@ def getImage(imageURL, number):
 
         return finalData
 
-getImage("http://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/image_article_collections/mcgraw_hill_skin_atlases/childhood_skin_problems/CAPD_varicella_chickenpox.jpg?resize=646px:*&output-quality=100")
+print(getImage("http://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/image_article_collections/mcgraw_hill_skin_atlases/childhood_skin_problems/CAPD_varicella_chickenpox.jpg?resize=646px:*&output-quality=100", "+14252298079"))

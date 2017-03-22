@@ -73,7 +73,3 @@ with open('chickenpox.pkl', 'wb') as f:
 	pickle.dump(model,f)
 
 
-while True:
-	input = raw_input("Enter filename: ")
-	if(model.predict(loadImage("/Users/Avinash/Documents/" + input)))[0] == 1:
-
