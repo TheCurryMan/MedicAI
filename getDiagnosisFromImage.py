@@ -76,6 +76,6 @@ def getImage(imageURL, number):
 
         return finalData
     else:
-        return "Could not find a recognizable disease with that image. Try using a different image, or messaging how you feel."
+        return "Could not find a recognizable disease with that image. Try using a different image, or message how you feel."
 
 """getImage("https://api.twilio.com/2010-04-01/Accounts/ACa9eca256e7d2b82539a0c6086dc244d7/Messages/MMeaebf591c584263789fe5307343f08d9/Media/MEe0f3f3d9bd29a0395ab2f7918f2fe7fa", "+14252298079")"""
