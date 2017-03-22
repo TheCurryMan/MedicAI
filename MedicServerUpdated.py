@@ -23,6 +23,9 @@ def hello_monkey():
 
     #Getting any image the user might have sent
     img_url = request.values.get('MediaUrl0', None)
+    print(request.values.get('MessageSid', None))
+    print(request.values)
+    print(request.values.get('MessagingServiceSid', None))
 
     #Getting the from number from the user
     from_number = request.values.get('From', None)
