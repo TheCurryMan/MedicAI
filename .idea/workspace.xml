@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/locationBasedAnalysis.py" line="51" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be363f1f-64a4-40d8-a8cb-dc81ed33384f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getDiagnosisFromImage.py" afterPath="$PROJECT_DIR$/getDiagnosisFromImage.py" />
-    </list>
+    <list default="true" id="be363f1f-64a4-40d8-a8cb-dc81ed33384f" name="Default" comment="" />
     <ignored path="MedicServerUpdated.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
