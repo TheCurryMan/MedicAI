@@ -50,7 +50,7 @@ warnings.filterwarnings("ignore")
 inputs = []
 outputs = []
 
-for fname in os.listdir('/Users/Avinash/Documents/chickenpox/')[:-4]:
+for fname in os.listdir('/Users/Avinash/Documents/chickenpox/')[:-6]:
 	try:
 		temp = loadImage("/Users/Avinash/Documents/chickenpox/" + fname)
 		if temp != "L":
