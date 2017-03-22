@@ -2,6 +2,9 @@
 import sys
 import os
 import pickle
+import cPickle
+import gzip
+
 if ".".join([str(x) for x in sys.version_info[:2]]) != "3.4":
 	print("This script requires Python version 3.4. Relaunching now...")	 
 	os.system('python3.4 main.py')
@@ -13,6 +16,11 @@ import warnings
 import random
 
 STANDARD_SIZE = (300, 172)
+
+
+def save_zipped_pickle(obj, filename, protocol=-1):
+    with gzip.open(filename, 'wb') as f:
+        cPickle.dump(obj, f, protocol)
 
 def flatten_image(img):
 	"""
@@ -69,7 +77,8 @@ Y = np.array(outputs)
 model = svm.SVC()
 model.fit(X,Y)
 
-with open('chickenpox.pkl', 'wb') as f:
-	pickle.dump(model,f)
+print("Created model")
+save_zipped_pickle(model, 'chickenpox.pgz')
+print("Done")
 
 
