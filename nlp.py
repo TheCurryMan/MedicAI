@@ -87,5 +87,3 @@ def getDiseaseFromLocalValues(stemmed_words, number):
 
         return finalData
     return ""
-
-print(getDiseaseFromSymptom("I have red spots all over my body and am feeling quite feverish", "+14252298079"))

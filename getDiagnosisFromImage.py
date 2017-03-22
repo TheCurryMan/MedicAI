@@ -59,5 +59,3 @@ def getImage(imageURL, number):
         finalData += "\n" + getNearestDoctor(number)
 
         return finalData
-
-print(getImage("http://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/image_article_collections/mcgraw_hill_skin_atlases/childhood_skin_problems/CAPD_varicella_chickenpox.jpg?resize=646px:*&output-quality=100", "+14252298079"))
