@@ -11,3 +11,4 @@ geopy==1.11.0
 sklearn==0.0
 image==1.5.5
 numpy==1.8.0
+Pillow==3.4.1
