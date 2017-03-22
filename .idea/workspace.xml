@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be363f1f-64a4-40d8-a8cb-dc81ed33384f" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/imageAnalysis.py" afterPath="$PROJECT_DIR$/modelCreation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chickenpox.pgz" afterPath="$PROJECT_DIR$/chickenpox.pgz" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getDiagnosisFromImage.py" afterPath="$PROJECT_DIR$/getDiagnosisFromImage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getMessage.py" afterPath="$PROJECT_DIR$/getMessage.py" />
     </list>
     <ignored path="MedicServerUpdated.iws" />
@@ -42,10 +41,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="modelCreation.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="modelCreation.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modelCreation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.0192307">
+            <state vertical-scroll-proportion="-4.5">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#16#26#0" expanded="true" />
@@ -59,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/getDiagnosisFromImage.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.4444447">
-              <caret line="57" column="42" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="42" />
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -111,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getMessage.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getMessage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getMessage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.555555">
-              <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.60897434">
+              <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -192,8 +191,8 @@
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/nlp.py" />
         <option value="$PROJECT_DIR$/MedicServerUpdated.py" />
-        <option value="$PROJECT_DIR$/getDiagnosisFromImage.py" />
         <option value="$PROJECT_DIR$/imageAnalysis.py" />
+        <option value="$PROJECT_DIR$/getDiagnosisFromImage.py" />
         <option value="$PROJECT_DIR$/getMessage.py" />
       </list>
     </option>
@@ -1091,30 +1090,30 @@
     <entry file="file://$PROJECT_DIR$/getDiagnosisFromImage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4444447">
-          <caret line="57" column="42" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="42" />
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getMessage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.555555">
-          <caret line="77" column="17" selection-start-line="77" selection-start-column="17" selection-end-line="77" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modelCreation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0192307">
+        <state vertical-scroll-proportion="-4.5">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#16#26#0" expanded="true" />
             <element signature="e#529#762#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getMessage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60897434">
+          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

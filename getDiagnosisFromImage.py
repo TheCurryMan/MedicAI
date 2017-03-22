@@ -45,7 +45,7 @@ def load_zipped_pickle(filename):
         return loaded_object
 
 def getImage(imageURL, number):
-
+    print("IN IMAGE SECTION RIGHT NOW")
     response = requests.get(imageURL)
     print(response.url)
 

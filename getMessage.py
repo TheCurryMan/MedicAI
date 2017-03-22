@@ -73,7 +73,7 @@ def getMessage(from_number, body, img_url):
 
         # Start getting symptom analysis from text
         else:
-            if img_url != "":
+            if img_url != None:
                 finalDisease = getImage(img_url, from_number)
             else:
                 finalDisease = getDiseaseFromSymptom(body, from_number)
