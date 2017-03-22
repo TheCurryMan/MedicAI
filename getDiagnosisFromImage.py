@@ -61,5 +61,3 @@ def getImage(imageURL, number):
         finalData += "\n" + getNearestDoctor(number)
 
         return finalData
-
-getImage("https://s3-external-1.amazonaws.com/media.twiliocdn.com/ACa9eca256e7d2b82539a0c6086dc244d7/b9920d56ceca6bd39c17ca276f9608d6", "+14252298079")
