@@ -8,6 +8,7 @@ from nearestDoctor import getNearestDoctor
 import json
 import warnings
 import io
+import requests
 
 STANDARD_SIZE = (300, 172)
 
@@ -34,9 +35,12 @@ def loadImage(image):
 
 def getImage(imageURL, number):
 
+    response = requests.get(imageURL)
+    print(response.url)
+
     warnings.filterwarnings("ignore")
 
-    f = io.BytesIO(urllib2.urlopen(imageURL).read())
+    f = io.BytesIO(urllib2.urlopen(response.url).read())
     im = Image.open(f)
     model = svm.SVC()
     with open('chickenpox.pkl', 'rb') as f:
